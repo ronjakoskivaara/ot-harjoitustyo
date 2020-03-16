@@ -1,6 +1,6 @@
 # Ot-harjoitustyö
 
-*Kuvaus harjoitustyöstä* tulee **tähän**
+*Kuvaus harjoitustyöstä* tulee **tähän**.
 
 ## Tehtävät
 
