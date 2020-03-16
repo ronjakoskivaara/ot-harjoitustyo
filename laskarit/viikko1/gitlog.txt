@@ -1,0 +1,95 @@
+commit 1cca8c2472044ed4594ea62c6ece10286a0ffb48
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Mon Mar 16 12:54:04 2020 +0200
+
+    poistettu file1 ja uudelleennimetty file2 file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f110aa90212008abacea2630d287f04e02e90eb0
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Mon Mar 16 12:50:42 2020 +0200
+
+    luotu tiedostoja ja sinne file1 file2 ja file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit effbaaf48ae3a65038d85a6d6d09dc5212aeb285
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:53:40 2020 +0200
+
+    muutettu eka.txt ja kolmas.txt
+
+ eka.txt    | 5 ++++-
+ kolmas.txt | 5 ++++-
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+commit 034c0023fc57c790bb78b6eddd7e5c84c87ba101
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:39:42 2020 +0200
+
+    muutettu tiedosto.txt nimi eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1d7fc51d6debaf9ab2b64e820f5c85431e2b4be5
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:37:40 2020 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ef56760240f17eff77529a74ef104e9ea6d3b2f3
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:35:31 2020 +0200
+
+    luotu stuff ja joku.txt
+
+ stuff/joku.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a7cddd4bbb683fc5b03ddc8b67171bc52da3346b
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:34:25 2020 +0200
+
+    muokattu toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 67999ae2eab190f3791624e537ab5c3bd966689e
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:33:38 2020 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a277baab09cf3dfaa50c5afbb7e97031d56f24aa
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:32:25 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit a61fb5266d8b3f87976e8de78d6b33431ac64b41
+Author: Ronja Koskivaara <ronja.koskivaara@gmail.com>
+Date:   Sat Mar 14 18:30:56 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
