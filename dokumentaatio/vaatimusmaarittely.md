@@ -1,11 +1,11 @@
-#Vaatimusmäärittely
-##Sovelluksen tarkoitus
+# Vaatimusmäärittely
+## Sovelluksen tarkoitus
 Sovelluksella voi harjoitella yksinkertaisia matematiikan päässälaskuja. Sovellus generoi laskun, jonka jälkeen käyttäjä kirjoittaa vastauksen ja saa sen jälkeen tietää oliko vastaus oikein. Laskuja voi tehdä monia putkeen.  
 
-##Käyttäjät
+## Käyttäjät
 Sovelluksella tulee olemaan vain yhdenlaisia normaaleja käyttäjiä.  
 
-##Suunnitellut toiminnallisuudet
+## Suunnitellut toiminnallisuudet
 -alkunäyttö, josta voi painaa aloita  
 -aloituksen jälkeen lasku ilmestyy ja siihen voi vastata  
 -vastaamisen jälkeen kerrotaan oliko oikein vai väärin  
@@ -14,7 +14,7 @@ Sovelluksella tulee olemaan vain yhdenlaisia normaaleja käyttäjiä.
 -alussa vain pluslaskuja  
 -jonkinnäköiset rajoitukset lukujen suuruuteen  
 
-##Jatkokehitysideoita
+## Jatkokehitysideoita
 -myös miinus- kerto- ja jakolaskut  
 -sovellus laskee kuinka paljon tehdyistä laskuista mennyt oikein  
 -kirjautumismahdollisuus, jotta voi tallentaa omat tuloksensa ja katsoa edistymistä  
