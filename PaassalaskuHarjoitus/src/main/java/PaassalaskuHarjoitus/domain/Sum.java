@@ -30,11 +30,16 @@ public class Sum {
         System.out.println("Laske " +  this.first + " + " + this.second);
     }
     public void compareAnswer(String s) {
-        int playerAnswer = Integer.valueOf(s);
-        if (playerAnswer == this.answer) {
-            System.out.println("Oikein");
-        } else {
-            System.out.println("Väärin");
+        try {
+            int playerAnswer = Integer.valueOf(s);
+            if (playerAnswer == this.answer) {
+                System.out.println("Oikein");
+            } else {
+                System.out.println("Väärin");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Et syöttänyt numeroa");
         }
     } 
     
