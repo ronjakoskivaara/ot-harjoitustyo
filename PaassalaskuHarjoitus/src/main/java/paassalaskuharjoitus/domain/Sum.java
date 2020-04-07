@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaassalaskuHarjoitus.domain;
-import PaassalaskuHarjoitus.domain.RandomGeneratorForSum;
+package paassalaskuharjoitus.domain;
+import paassalaskuharjoitus.domain.RandomGeneratorForSum;
 
 
 /**
@@ -29,21 +29,19 @@ public class Sum {
         this.answer = this.first + this.second;
         return ("Laske " +  this.first + " + " + this.second);
     }
-    public void compareAnswer(String s) {
+    public String compareAnswer(String s) {
         try {
             int playerAnswer = Integer.valueOf(s);
             if (playerAnswer == this.answer) {
-                System.out.println("Oikein");
+                return "Oikein";
             } else {
-                System.out.println("Väärin");
+                return "Väärin";
             }
-        }
-        catch (Exception e) {
-            System.out.println("Et syöttänyt numeroa");
+        } catch (Exception e) {
+            return "Et syöttänyt numeroa";
         }
     } 
     public String printCalculationInstruction() {
         return "Pluslaskujen harjoittelua";
-    }
-    
-    }
+    }   
+}

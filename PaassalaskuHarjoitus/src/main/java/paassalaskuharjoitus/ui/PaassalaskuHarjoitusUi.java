@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PaassalaskuHarjoitus.ui;
+package paassalaskuharjoitus.ui;
 
-import PaassalaskuHarjoitus.domain.Sum;
+import paassalaskuharjoitus.domain.Sum;
 import javafx.scene.control.Button;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -38,7 +38,7 @@ public class PaassalaskuHarjoitusUi extends Application {
         });
         
         BorderPane calculationBorderPane = new BorderPane();
-        calculationBorderPane.setPrefSize(500,200);
+        calculationBorderPane.setPrefSize(500, 200);
         
         VBox calculationVBox = new VBox();
         calculationVBox.setSpacing(10);
@@ -51,15 +51,21 @@ public class PaassalaskuHarjoitusUi extends Application {
         calculationBorderPane.setTop(calculationTitle);
         
         Label question = new Label(sumCalculation.printCalculation());
+        TextField rightAnswer = new TextField();
         TextField answer = new TextField();
         
         
         Button answerButton = new Button("Vastaa");
         
         calculationVBox.getChildren().add(question);
+        calculationVBox.getChildren().add(rightAnswer);
         calculationVBox.getChildren().add(answer);
         calculationVBox.getChildren().add(answerButton);
         
+        answerButton.setOnAction((event) -> {
+            rightAnswer.setText(
+            sumCalculation.compareAnswer(answer.getText()));
+        });        
         calculationScene = new Scene(calculationBorderPane);
         
         primaryStage.setScene(startScene);

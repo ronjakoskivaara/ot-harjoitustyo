@@ -1,7 +1,7 @@
-package PaassalaskuHarjoitus;
+package paassalaskuharjoitus;
 
-import PaassalaskuHarjoitus.domain.Sum;
-import PaassalaskuHarjoitus.ui.PaassalaskuHarjoitusUi;
+import paassalaskuharjoitus.domain.Sum;
+import paassalaskuharjoitus.ui.PaassalaskuHarjoitusUi;
 import java.util.Scanner;
 
 /**

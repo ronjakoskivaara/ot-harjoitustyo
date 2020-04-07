@@ -3,9 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package domain;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 
-import PaassalaskuHarjoitus.domain.RandomGeneratorForSum;
+import paassalaskuharjoitus.domain.RandomGeneratorForSum;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -24,8 +31,7 @@ public class RandomGeneratorForSumTest {
     @Before
     public void setUp() {
         this.random = new RandomGeneratorForSum();
-    }
-   
+    }   
     @Test
     public void generatedNumberBelow51() {
         int test = this.random.returnRandomForSum();
@@ -36,8 +42,4 @@ public class RandomGeneratorForSumTest {
         int test = this.random.returnRandomForSum();
         assertFalse(test >= 51);
     }
-
-
-
-    
 }
