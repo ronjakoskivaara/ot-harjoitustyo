@@ -5,7 +5,10 @@
  */
 package PaassalaskuHarjoitus.ui;
 
+import javafx.scene.control.Button;
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 /**
@@ -15,9 +18,17 @@ import javafx.stage.Stage;
 public class PaassalaskuHarjoitusUi extends Application {
     
     @Override
-    public void start(Stage ikkuna) {
-        ikkuna.setTitle("Hei Maailma!");
-        ikkuna.show();
+    public void start(Stage stage) {
+        
+        stage.setTitle("Päässälaskuharjoittelu");
+        
+        Button startButton = new Button("Aloita");
+        FlowPane components = new FlowPane();
+        components.getChildren().add(startButton);
+        
+        Scene startScene = new Scene(components);
+        stage.setScene(startScene);
+        stage.show();
     }
     
     public static void main(String[] args) {
