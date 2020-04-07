@@ -38,17 +38,21 @@ public class PaassalaskuHarjoitusUi extends Application {
         });
         
         BorderPane calculationBorderPane = new BorderPane();
+        calculationBorderPane.setPrefSize(500,200);
         
         VBox calculationVBox = new VBox();
         calculationVBox.setSpacing(10);
         
-        TextField calculationTitle = new TextField();
         Sum sumCalculation = new Sum();
+        TextField calculationTitle = new TextField();
         calculationTitle.setText(sumCalculation.printCalculationInstruction());
+        
         calculationBorderPane.setCenter(calculationVBox);
         calculationBorderPane.setTop(calculationTitle);
-        TextField question = new TextField();
+        
+        Label question = new Label(sumCalculation.printCalculation());
         TextField answer = new TextField();
+        
         
         Button answerButton = new Button("Vastaa");
         

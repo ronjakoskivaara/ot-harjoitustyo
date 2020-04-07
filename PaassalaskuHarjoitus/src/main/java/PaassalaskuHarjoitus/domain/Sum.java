@@ -23,11 +23,11 @@ public class Sum {
     }
     
     
-    public void printCalculation() {
+    public String printCalculation() {
         this.first = generator.returnRandomForSum();
         this.second = generator.returnRandomForSum();
         this.answer = this.first + this.second;
-        System.out.println("Laske " +  this.first + " + " + this.second);
+        return ("Laske " +  this.first + " + " + this.second);
     }
     public void compareAnswer(String s) {
         try {
