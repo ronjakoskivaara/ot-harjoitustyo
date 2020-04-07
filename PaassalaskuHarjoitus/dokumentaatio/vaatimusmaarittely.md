@@ -6,12 +6,12 @@ Sovelluksella voi harjoitella yksinkertaisia matematiikan päässälaskuja. Sove
 Sovelluksella tulee olemaan vain yhdenlaisia normaaleja käyttäjiä.  
 
 ## Suunnitellut toiminnallisuudet
--alkunäyttö, josta voi painaa aloita  
--aloituksen jälkeen lasku ilmestyy ja siihen voi vastata  
--vastaamisen jälkeen kerrotaan oliko oikein vai väärin  
+-alkunäyttö, josta voi painaa aloita (tehty) 
+-aloituksen jälkeen lasku ilmestyy ja siihen voi vastata  (tehty)
+-vastaamisen jälkeen kerrotaan oliko oikein vai väärin  (tehty)
 -seuraava lasku ilmestyy tai siihen pitää itse siirtyä(?)  
 -erillinen lopetusnappi  
--alussa vain pluslaskuja  
+-alussa vain pluslaskuja  (tehty)
 -jonkinnäköiset rajoitukset lukujen suuruuteen  
 
 ## Jatkokehitysideoita
