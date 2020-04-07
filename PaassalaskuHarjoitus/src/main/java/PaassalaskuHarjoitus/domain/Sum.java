@@ -42,5 +42,8 @@ public class Sum {
             System.out.println("Et syöttänyt numeroa");
         }
     } 
+    public String printCalculationInstruction() {
+        return "Pluslaskujen harjoittelua";
+    }
     
     }

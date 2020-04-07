@@ -5,6 +5,7 @@
  */
 package PaassalaskuHarjoitus.ui;
 
+import PaassalaskuHarjoitus.domain.Sum;
 import javafx.scene.control.Button;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -41,7 +42,11 @@ public class PaassalaskuHarjoitusUi extends Application {
         VBox calculationVBox = new VBox();
         calculationVBox.setSpacing(10);
         
+        TextField calculationTitle = new TextField();
+        Sum sumCalculation = new Sum();
+        calculationTitle.setText(sumCalculation.printCalculationInstruction());
         calculationBorderPane.setCenter(calculationVBox);
+        calculationBorderPane.setTop(calculationTitle);
         TextField question = new TextField();
         TextField answer = new TextField();
         
