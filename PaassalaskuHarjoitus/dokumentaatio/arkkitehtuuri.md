@@ -1,1 +1,1 @@
-![pakkaus/luokkakaavio](/home/koskiron/ot-harjoitustyo/PaassalaskuHarjoitus/dokumentaatio/kuvat/PaassalaskuHarjoitusLuokkaPakkausKaavio.jpg)
+![pakkaus/luokkakaavi](https://github.com/ronjakoskivaara/ot-harjoitustyo/blob/master/PaassalaskuHarjoitus/dokumentaatio/kuvat/PaassalaskuHarjoitusLuokkaPakkausKaavio.jpg)
