@@ -58,9 +58,9 @@ public class PaassalaskuHarjoitusUi extends Application {
         Button answerButton = new Button("Vastaa");
         
         calculationVBox.getChildren().add(question);
-        calculationVBox.getChildren().add(rightAnswer);
         calculationVBox.getChildren().add(answer);
         calculationVBox.getChildren().add(answerButton);
+        calculationVBox.getChildren().add(rightAnswer);
         
         answerButton.setOnAction((event) -> {
             rightAnswer.setText(
