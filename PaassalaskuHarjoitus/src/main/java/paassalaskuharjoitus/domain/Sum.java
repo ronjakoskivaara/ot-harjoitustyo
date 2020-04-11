@@ -41,7 +41,7 @@ public class Sum {
             return "Et syöttänyt numeroa";
         }
     } 
-    public String printCalculationInstruction() {
+    public String printCalculationClassInstruction() {
         return "Pluslaskujen harjoittelua";
     }   
 }

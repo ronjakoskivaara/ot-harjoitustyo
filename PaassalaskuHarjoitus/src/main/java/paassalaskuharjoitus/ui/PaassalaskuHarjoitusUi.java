@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -43,23 +44,34 @@ public class PaassalaskuHarjoitusUi extends Application {
         VBox calculationVBox = new VBox();
         calculationVBox.setSpacing(10);
         
-        Sum sumCalculation = new Sum();
-        TextField calculationTitle = new TextField();
-        calculationTitle.setText(sumCalculation.printCalculationInstruction());
-        
         calculationBorderPane.setCenter(calculationVBox);
+        
+        TextField calculationTitle = new TextField();
+        
+        Sum sumCalculation = new Sum();
+
+        calculationTitle.setText(sumCalculation.printCalculationClassInstruction());
+        
+
         calculationBorderPane.setTop(calculationTitle);
         
-        Label question = new Label(sumCalculation.printCalculation());
+        Label question = new Label();
+        question.setText(sumCalculation.printCalculation());
+        
+        TextField answer = new TextField();        
         TextField rightAnswer = new TextField();
-        TextField answer = new TextField();
+      
+        Button answerButton = new Button("Vastaa");     
+        Button newCalculationButton = new Button("Uusi lasku");
         
-        
-        Button answerButton = new Button("Vastaa");
+        HBox answerAndNewCalculationButtonsHBox = new HBox();
+        answerAndNewCalculationButtonsHBox.setSpacing(10);
+        answerAndNewCalculationButtonsHBox.getChildren().add(answerButton);
+        answerAndNewCalculationButtonsHBox.getChildren().add(newCalculationButton);
         
         calculationVBox.getChildren().add(question);
         calculationVBox.getChildren().add(answer);
-        calculationVBox.getChildren().add(answerButton);
+        calculationVBox.getChildren().add(answerAndNewCalculationButtonsHBox);
         calculationVBox.getChildren().add(rightAnswer);
         
         answerButton.setOnAction((event) -> {
@@ -67,6 +79,14 @@ public class PaassalaskuHarjoitusUi extends Application {
             sumCalculation.compareAnswer(answer.getText()));
         });        
         calculationScene = new Scene(calculationBorderPane);
+        
+        newCalculationButton.setOnAction((event) -> { 
+            question.setText(sumCalculation.printCalculation());
+            answer.clear();
+            rightAnswer.clear();
+            
+            
+        });
         
         primaryStage.setScene(startScene);
         primaryStage.show();

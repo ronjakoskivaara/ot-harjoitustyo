@@ -34,7 +34,7 @@ public class SumTest {
     }
     @Test
     public void printCalculationInstructionReturnsString() {
-        assertTrue(sum.printCalculationInstruction() instanceof String);
+        assertTrue(sum.printCalculationClassInstruction() instanceof String);
     }
     @Test
     public void notAnsweringANumberCreatesException() {
