@@ -69,7 +69,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>PaassalaskuHarjoitus.Main</mainClass>
+                                    <mainClass>paassalaskuharjoitus.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
