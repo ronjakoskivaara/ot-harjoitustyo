@@ -12,7 +12,7 @@ Sovelluksella tulee olemaan vain yhdenlaisia normaaleja käyttäjiä.
 -seuraava lasku ilmestyy tai siihen pitää itse siirtyä(?)  
 -erillinen lopetusnappi  
 -alussa vain pluslaskuja (tehty)  
--jonkinnäköiset rajoitukset lukujen suuruuteen  
+-jonkinnäköiset rajoitukset lukujen suuruuteen (tehty)  
 
 ## Jatkokehitysideoita
 -myös miinus- kerto- ja jakolaskut  
