@@ -8,6 +8,7 @@ package paassalaskuharjoitus.ui;
 import paassalaskuharjoitus.domain.Sum;
 import javafx.scene.control.Button;
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -23,22 +24,24 @@ import javafx.stage.Stage;
  */
 public class PaassalaskuHarjoitusUi extends Application {
     
-    private Scene calculationScene;
+    private Scene sumCalculationScene;
     private Scene chooseCalculationScene;
     
     @Override
     public void start(Stage primaryStage) {
         
         primaryStage.setTitle("Päässälaskuharjoittelu");
+        primaryStage.setHeight(500);
+        primaryStage.setWidth(500);
         
         Button startButton = new Button("Aloita");
-        FlowPane flowPaneStart = new FlowPane();
-        Scene startScene = new Scene(flowPaneStart);
-        flowPaneStart.getChildren().add(startButton);
+        BorderPane borderPaneStart = new BorderPane();
+        Scene startScene = new Scene(borderPaneStart);
+        borderPaneStart.setCenter(startButton);
         
         
         startButton.setOnAction((event) -> {
-            primaryStage.setScene(calculationScene);
+            primaryStage.setScene(this.chooseCalculationScene);
         });
         
         BorderPane chooseCalculationBorderPane = new BorderPane();
@@ -47,15 +50,20 @@ public class PaassalaskuHarjoitusUi extends Application {
         Button subtractionButton = new Button("Miinuslaskut");
         VBox calculationButtonsVBox = new VBox();
         calculationButtonsVBox.setSpacing(10);
-        
+        calculationButtonsVBox.setAlignment(Pos.CENTER);
         calculationButtonsVBox.getChildren().add(sumButton);
         calculationButtonsVBox.getChildren().add(subtractionButton);
         
         chooseCalculationBorderPane.setTop(chooseCalculationInstructionLabel);
+        chooseCalculationBorderPane.setAlignment(chooseCalculationInstructionLabel, Pos.TOP_CENTER);
         chooseCalculationBorderPane.setCenter(calculationButtonsVBox);
+
         
         this.chooseCalculationScene = new Scene(chooseCalculationBorderPane);
         
+        sumButton.setOnAction((event) -> {
+            primaryStage.setScene(this.sumCalculationScene);
+        });
         
         BorderPane calculationBorderPane = new BorderPane();
         calculationBorderPane.setPrefSize(500, 200);
@@ -73,7 +81,7 @@ public class PaassalaskuHarjoitusUi extends Application {
         
         calculationBorderPane.setTop(calculationTitle);
         
-        this.calculationScene = new Scene(calculationBorderPane);
+        this.sumCalculationScene = new Scene(calculationBorderPane);
         
         Label question = new Label();
         question.setText(sumCalculation.printCalculation());
