@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 public class PaassalaskuHarjoitusUi extends Application {
     
     private Scene calculationScene;
+    private Scene chooseCalculationScene;
     
     @Override
     public void start(Stage primaryStage) {
@@ -34,9 +35,27 @@ public class PaassalaskuHarjoitusUi extends Application {
         FlowPane flowPaneStart = new FlowPane();
         Scene startScene = new Scene(flowPaneStart);
         flowPaneStart.getChildren().add(startButton);
+        
+        
         startButton.setOnAction((event) -> {
             primaryStage.setScene(calculationScene);
         });
+        
+        BorderPane chooseCalculationBorderPane = new BorderPane();
+        Label chooseCalculationInstructionLabel = new Label("Valitse harjoituksen tyyppi");
+        Button sumButton = new Button("Pluslaskut");
+        Button subtractionButton = new Button("Miinuslaskut");
+        VBox calculationButtonsVBox = new VBox();
+        calculationButtonsVBox.setSpacing(10);
+        
+        calculationButtonsVBox.getChildren().add(sumButton);
+        calculationButtonsVBox.getChildren().add(subtractionButton);
+        
+        chooseCalculationBorderPane.setTop(chooseCalculationInstructionLabel);
+        chooseCalculationBorderPane.setCenter(calculationButtonsVBox);
+        
+        this.chooseCalculationScene = new Scene(chooseCalculationBorderPane);
+        
         
         BorderPane calculationBorderPane = new BorderPane();
         calculationBorderPane.setPrefSize(500, 200);
@@ -52,8 +71,9 @@ public class PaassalaskuHarjoitusUi extends Application {
 
         calculationTitle.setText(sumCalculation.printCalculationClassInstruction());
         
-
         calculationBorderPane.setTop(calculationTitle);
+        
+        this.calculationScene = new Scene(calculationBorderPane);
         
         Label question = new Label();
         question.setText(sumCalculation.printCalculation());
@@ -78,7 +98,7 @@ public class PaassalaskuHarjoitusUi extends Application {
             rightAnswer.setText(
             sumCalculation.compareAnswer(answer.getText()));
         });        
-        calculationScene = new Scene(calculationBorderPane);
+
         
         newCalculationButton.setOnAction((event) -> { 
             question.setText(sumCalculation.printCalculation());
