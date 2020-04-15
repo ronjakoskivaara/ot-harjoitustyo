@@ -6,5 +6,6 @@ Päivä | Aika | Mitä tein
 6.4.  | 3 | pom.xml:n tarpeellista muokkausta, javafx:n opettelua
 7.4.  | 7 | käyttöliittymän aloitus ja testien lisäystä, sekä checkstylen tarkistusta, arkkitehtuurikuvauksen ensimäinen vaihe tehty
 11.4. | 0.5 | laskuja pystyy laskemaan monta
-14..4. | 0.5 | github release
-yht   | 15 |
+14.4. | 0.5 | github release
+15.4. | 1 | luotu uusi näkymä, jotta miinuslaskujen harjoitteluun pääsee kunhan se on rakennettu
+yht   | 16 |
