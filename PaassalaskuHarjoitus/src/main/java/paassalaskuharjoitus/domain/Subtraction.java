@@ -11,4 +11,34 @@ package paassalaskuharjoitus.domain;
  */
 public class Subtraction {
     
+    private int first;
+    private int second;
+    private int answer;
+    private RandomGeneratorForSubtraction generator;
+    
+    public Subtraction() {
+        this.generator = new RandomGeneratorForSubtraction();
+    }
+    public String printCalculation() {
+        this.first = generator.returnFirstRandomForSubtraction();
+        this.second = generator.returnSecondRandomForSubtraction(this.first);
+        return ("Laske " +  this.first + " + " + this.second);
+    }
+    public String compareAnswer(String s) {
+        try {
+            int playerAnswer = Integer.valueOf(s);
+            if (playerAnswer == this.answer) {
+                return "Oikein";
+            } else {
+                return "Väärin";
+            }
+        } catch (Exception e) {
+            return "Et syöttänyt numeroa";
+        }
+    }
+        
+    public String printCalculationClassInstruction() {
+        return "Miinuslaskujen harjoittelua";
+    } 
+    
 }

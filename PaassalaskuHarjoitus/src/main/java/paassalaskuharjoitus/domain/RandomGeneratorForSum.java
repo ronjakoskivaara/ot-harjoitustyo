@@ -7,10 +7,6 @@ package paassalaskuharjoitus.domain;
 
 import java.util.Random;
 
-/**
- *
- * @author koskiron
- */
 public class RandomGeneratorForSum {
     //randoms limited 0-50
     private Random random;
