@@ -22,7 +22,8 @@ public class Subtraction {
     public String printCalculation() {
         this.first = generator.returnFirstRandomForSubtraction();
         this.second = generator.returnSecondRandomForSubtraction(this.first);
-        return ("Laske " +  this.first + " + " + this.second);
+        this.answer = this.first - this.second;
+        return ("Laske " +  this.first + " - " + this.second);
     }
     public String compareAnswer(String s) {
         try {

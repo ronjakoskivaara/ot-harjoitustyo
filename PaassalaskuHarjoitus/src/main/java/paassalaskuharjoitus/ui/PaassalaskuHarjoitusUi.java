@@ -17,6 +17,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import paassalaskuharjoitus.domain.Subtraction;
 
 /**
  *
@@ -26,6 +27,7 @@ public class PaassalaskuHarjoitusUi extends Application {
     
     private Scene sumCalculationScene;
     private Scene chooseCalculationScene;
+    private Scene subtractionCalculationScene;
     
     @Override
     public void start(Stage primaryStage) {
@@ -65,23 +67,37 @@ public class PaassalaskuHarjoitusUi extends Application {
             primaryStage.setScene(this.sumCalculationScene);
         });
         
+        this.sumCalculationScene = createSumScene();
+        
+        subtractionButton.setOnAction((event) -> {
+           primaryStage.setScene(this.subtractionCalculationScene); 
+        });
+        
+        this.subtractionCalculationScene = createSubtractionScene();
+
+        primaryStage.setScene(startScene);
+        primaryStage.show();
+    }
+    
+    public static Scene createSumScene() {
+        
         BorderPane calculationBorderPane = new BorderPane();
         calculationBorderPane.setPrefSize(500, 200);
-        
+
         VBox calculationVBox = new VBox();
         calculationVBox.setSpacing(10);
-        
+
         calculationBorderPane.setCenter(calculationVBox);
-        
+
         TextField calculationTitle = new TextField();
-        
+
         Sum sumCalculation = new Sum();
 
         calculationTitle.setText(sumCalculation.printCalculationClassInstruction());
+
+        calculationBorderPane.setTop(calculationTitle);        
         
-        calculationBorderPane.setTop(calculationTitle);
-        
-        this.sumCalculationScene = new Scene(calculationBorderPane);
+        Scene newSumCalculationScene = new Scene(calculationBorderPane);
         
         Label question = new Label();
         question.setText(sumCalculation.printCalculation());
@@ -100,8 +116,8 @@ public class PaassalaskuHarjoitusUi extends Application {
         calculationVBox.getChildren().add(question);
         calculationVBox.getChildren().add(answer);
         calculationVBox.getChildren().add(answerAndNewCalculationButtonsHBox);
-        calculationVBox.getChildren().add(rightAnswer);
-        
+        calculationVBox.getChildren().add(rightAnswer);  
+
         answerButton.setOnAction((event) -> {
             rightAnswer.setText(
             sumCalculation.compareAnswer(answer.getText()));
@@ -114,11 +130,63 @@ public class PaassalaskuHarjoitusUi extends Application {
             rightAnswer.clear();
             
             
-        });
-        
-        primaryStage.setScene(startScene);
-        primaryStage.show();
+        });        
+        return newSumCalculationScene;
     }
+    public static Scene createSubtractionScene() {
+        
+        BorderPane calculationBorderPane = new BorderPane();
+        calculationBorderPane.setPrefSize(500, 200);
+
+        VBox calculationVBox = new VBox();
+        calculationVBox.setSpacing(10);
+
+        calculationBorderPane.setCenter(calculationVBox);
+
+        TextField calculationTitle = new TextField();
+
+        Subtraction subtractionCalculation = new Subtraction();
+
+        calculationTitle.setText(subtractionCalculation.printCalculationClassInstruction());
+
+        calculationBorderPane.setTop(calculationTitle);        
+        
+        Scene newSubtractionCalculationScene = new Scene(calculationBorderPane);
+        
+        Label question = new Label();
+        question.setText(subtractionCalculation.printCalculation());
+        
+        TextField answer = new TextField();        
+        TextField rightAnswer = new TextField();
+      
+        Button answerButton = new Button("Vastaa");     
+        Button newCalculationButton = new Button("Uusi lasku");
+        
+        HBox answerAndNewCalculationButtonsHBox = new HBox();
+        answerAndNewCalculationButtonsHBox.setSpacing(10);
+        answerAndNewCalculationButtonsHBox.getChildren().add(answerButton);
+        answerAndNewCalculationButtonsHBox.getChildren().add(newCalculationButton);
+        
+        calculationVBox.getChildren().add(question);
+        calculationVBox.getChildren().add(answer);
+        calculationVBox.getChildren().add(answerAndNewCalculationButtonsHBox);
+        calculationVBox.getChildren().add(rightAnswer);  
+
+        answerButton.setOnAction((event) -> {
+            rightAnswer.setText(
+            subtractionCalculation.compareAnswer(answer.getText()));
+        });        
+
+        
+        newCalculationButton.setOnAction((event) -> { 
+            question.setText(subtractionCalculation.printCalculation());
+            answer.clear();
+            rightAnswer.clear();
+            
+            
+        });        
+        return newSubtractionCalculationScene;
+    }    
     
     public static void main(String[] args) {
         launch(args);
