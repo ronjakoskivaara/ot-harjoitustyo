@@ -27,8 +27,8 @@ JavaDoc generoidaan komennolla
 JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html  
 ### Checkstyle
 Tiedostoon [checkstyle.xml](https://github.com/ronjakoskivaara/ot-harjoitustyo/blob/master/PaassalaskuHarjoitus/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla  
-`mvn jxr:jxr checkstyle:checkstyle`
-Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto target/site/checkstyle.html
+`mvn jxr:jxr checkstyle:checkstyle`  
+Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto target/site/checkstyle.html  
 
 
 
