@@ -9,32 +9,32 @@ import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import paassalaskuharjoitus.domain.Sum;
+import paassalaskuharjoitus.domain.Subtraction;
 
 /**
  *
  * @author koskiron
  */
-public class SumTest {
+public class SubtractionTest {
     
-    private Sum sum;
+    private Subtraction subtraction;
     private Random random;
     
     @Before
     public void setUp() {
-        this.sum = new Sum();
+        this.subtraction = new Subtraction();
         this.random = new Random();
     }
     @Test
     public void printCalculationReturnsString() {
-        assertTrue(sum.printCalculation() instanceof String);
+        assertTrue(subtraction.printCalculation() instanceof String);
     }
     @Test
     public void printCalculationInstructionReturnsString() {
-        assertTrue(sum.printCalculationClassInstruction() instanceof String);
+        assertTrue(subtraction.printCalculationClassInstruction() instanceof String);
     }
     @Test
     public void notAnsweringANumberCreatesException() {
-        assertEquals("Et syöttänyt numeroa", sum.compareAnswer("a"));
+        assertEquals("Et syöttänyt numeroa", subtraction.compareAnswer("a"));
     }
 }
