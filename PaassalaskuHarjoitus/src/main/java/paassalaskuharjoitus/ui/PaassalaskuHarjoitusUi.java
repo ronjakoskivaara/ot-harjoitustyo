@@ -13,8 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import paassalaskuharjoitus.domain.Subtraction;
@@ -59,27 +59,33 @@ public class PaassalaskuHarjoitusUi extends Application {
         chooseCalculationBorderPane.setTop(chooseCalculationInstructionLabel);
         chooseCalculationBorderPane.setAlignment(chooseCalculationInstructionLabel, Pos.TOP_CENTER);
         chooseCalculationBorderPane.setCenter(calculationButtonsVBox);
-
-        
+           
         this.chooseCalculationScene = new Scene(chooseCalculationBorderPane);
         
+        StackPane sumStackPane = createSumStackPane();
+        StackPane subtractionStackPane = createSubtractionStackPane();
+                
         sumButton.setOnAction((event) -> {
-            primaryStage.setScene(this.sumCalculationScene);
+            chooseCalculationBorderPane.setBottom(sumStackPane);
         });
         
-        this.sumCalculationScene = createSumScene();
+//        this.sumCalculationScene = createSumScene();
         
         subtractionButton.setOnAction((event) -> {
-           primaryStage.setScene(this.subtractionCalculationScene); 
+           chooseCalculationBorderPane.setBottom(subtractionStackPane); 
         });
         
-        this.subtractionCalculationScene = createSubtractionScene();
+//        this.subtractionCalculationScene = createSubtractionScene();
 
         primaryStage.setScene(startScene);
         primaryStage.show();
     }
     
-    public static Scene createSumScene() {
+    public static StackPane createSumStackPane() {
+        
+        StackPane sumStackPane = new StackPane();
+        sumStackPane.setPrefSize(300, 180);
+        sumStackPane.setAlignment(Pos.CENTER);
         
         BorderPane calculationBorderPane = new BorderPane();
         calculationBorderPane.setPrefSize(500, 200);
@@ -130,10 +136,17 @@ public class PaassalaskuHarjoitusUi extends Application {
             rightAnswer.clear();
             
             
-        });        
-        return newSumCalculationScene;
+        });  
+        
+        sumStackPane.getChildren().add(calculationBorderPane);
+        
+        return sumStackPane;
     }
-    public static Scene createSubtractionScene() {
+    public static StackPane createSubtractionStackPane() {
+        
+        StackPane subtractionStackPane = new StackPane();
+        subtractionStackPane.setPrefSize(300, 180);
+        subtractionStackPane.setAlignment(Pos.CENTER);
         
         BorderPane calculationBorderPane = new BorderPane();
         calculationBorderPane.setPrefSize(500, 200);
@@ -170,7 +183,7 @@ public class PaassalaskuHarjoitusUi extends Application {
         calculationVBox.getChildren().add(question);
         calculationVBox.getChildren().add(answer);
         calculationVBox.getChildren().add(answerAndNewCalculationButtonsHBox);
-        calculationVBox.getChildren().add(rightAnswer);  
+        calculationVBox.getChildren().add(rightAnswer);
 
         answerButton.setOnAction((event) -> {
             rightAnswer.setText(
@@ -181,11 +194,11 @@ public class PaassalaskuHarjoitusUi extends Application {
         newCalculationButton.setOnAction((event) -> { 
             question.setText(subtractionCalculation.printCalculation());
             answer.clear();
-            rightAnswer.clear();
-            
-            
-        });        
-        return newSubtractionCalculationScene;
+            rightAnswer.clear();        
+        });    
+        subtractionStackPane.getChildren().add(calculationBorderPane);
+        
+        return subtractionStackPane;
     }    
     
     public static void main(String[] args) {
