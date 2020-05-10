@@ -12,4 +12,5 @@ Päivä | Aika | Mitä tein
 21.4. | 3 | rakennettu ui:ta lisää, luotu lisää testejä, tehty sekvenssikaavio, github release
 30.4. | 2 | muokattu pom.xml:ää javadocia varten, aloitettu javadoc
 6.5. | 3 | luettu materiaalia tikapesta ja tämän kurssin materiaaleista ja pohdittu voisinko lisätä tiedostojen käyttöä, ja päädytty siihen että ei onnistu. Muokattu käyttöliittymään niin, että plus- ja miinuslaskujen välillä voi vaihtaa milloin vain
+10.5. | 3 | viimeiset muokkaukset, javadocin päivitystä, käyttöohje, release
 yht   | 24 |
