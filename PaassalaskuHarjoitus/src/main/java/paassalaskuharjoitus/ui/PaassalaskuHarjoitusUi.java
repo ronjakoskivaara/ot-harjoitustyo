@@ -69,14 +69,10 @@ public class PaassalaskuHarjoitusUi extends Application {
             chooseCalculationBorderPane.setBottom(sumStackPane);
         });
         
-//        this.sumCalculationScene = createSumScene();
-        
         subtractionButton.setOnAction((event) -> {
            chooseCalculationBorderPane.setBottom(subtractionStackPane); 
         });
         
-//        this.subtractionCalculationScene = createSubtractionScene();
-
         primaryStage.setScene(startScene);
         primaryStage.show();
     }

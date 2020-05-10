@@ -34,7 +34,7 @@ public class Sum {
             if (playerAnswer == this.answer) {
                 return "Oikein";
             } else {
-                return "Väärin";
+                return "Väärin, oikea vastaus oli: " + this.answer;
             }
         } catch (Exception e) {
             return "Et syöttänyt numeroa";
