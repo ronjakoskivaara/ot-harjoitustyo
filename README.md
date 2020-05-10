@@ -1,6 +1,6 @@
 # Päässälaskusovellus
 
-Sovelluksella voi harjoitella helppoja päässälaskuja.  
+Sovelluksella voi harjoitella helppoja matematiikan plus- ja miinuspäässälaskuja.  
 
 ## Releaset
 [Loppupalautus](https://github.com/ronjakoskivaara/ot-harjoitustyo/releases/tag/loppupalautus)
