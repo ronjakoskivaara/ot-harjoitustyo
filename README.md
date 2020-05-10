@@ -13,19 +13,19 @@ Sovelluksella voi harjoitella helppoja päässälaskuja.
 
 ## Komentorivitoiminnot
 ### Testaus
-Testit suoritetaan komennolla  
+Testit komennolla  
 `mvn test`  
-Testikattavuusraportti luodaan komennolla  
+Testikattavuusraportti komennolla  
 `mvn jacoco:report`  
-Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html  
+Kattavuusraporttia voi tarkastella avaamalla selaimella tiedoston target/site/jacoco/index.html  
 ### Suoritettavan jarin generointi
 Komento  
 `mvn package`  
-generoi hakemistoon target suoritettavan jar-tiedoston PaassalaskuHarjoitus-1.0-SNAPSHOT.jar  
+luo hakemistoon target suoritettavan jar-tiedoston PaassalaskuHarjoitus-1.0-SNAPSHOT.jar  
 ### JavaDoc
 JavaDoc generoidaan komennolla  
 `mvn javadoc:javadoc`  
-JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html  
+JavaDocia voi tarkastella avaamalla selaimella tiedoston target/site/apidocs/index.html  
 ### Checkstyle
 Tiedostoon [checkstyle.xml](https://github.com/ronjakoskivaara/ot-harjoitustyo/blob/master/PaassalaskuHarjoitus/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla  
 `mvn jxr:jxr checkstyle:checkstyle`  
