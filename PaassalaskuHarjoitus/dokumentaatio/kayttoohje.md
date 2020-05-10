@@ -1,5 +1,5 @@
 # Käyttöohje
-Aluksi lataa tiedosto loppupalautuksen releasesta.
+Aluksi lataa tiedosto [paassalaskuharjoitus.jar](https://github.com/ronjakoskivaara/ot-harjoitustyo/releases/tag/loppupalautus)  loppupalautuksen releasesta.
 
 ## Ohjelman käynnistäminen
 Tiedoston lataamisen jälkeen ohjelman saa käynnistettyä komennolla  
