@@ -3,6 +3,7 @@
 Sovelluksella voi harjoitella helppoja päässälaskuja.  
 
 ## Releaset
+[Loppupalautus](https://github.com/ronjakoskivaara/ot-harjoitustyo/releases/tag/loppupalautus)
 [Viikko 5](https://github.com/ronjakoskivaara/ot-harjoitustyo/releases)
 
 ## Dokumentaatio
