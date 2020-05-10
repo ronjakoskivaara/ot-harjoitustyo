@@ -15,10 +15,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import paassalaskuharjoitus.domain.Subtraction;
 
-/**
- *
- * @author koskiron
- */
 public class PaassalaskuHarjoitusUi extends Application {
     
     private Scene sumCalculationScene;
